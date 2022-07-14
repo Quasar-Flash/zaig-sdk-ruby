@@ -1,5 +1,0 @@
-api:
-  base_url: https://integra-o-zaig.prod.qflash.com.br/
-  endpoints:
-    inquiry:
-      credit: zaig/consulta_de_credito

@@ -15,7 +15,6 @@ Gem::Specification.new do |s|
   s.required_ruby_version = ">= 2.7"
   s.files = Dir["{lib}/**/*"] + Dir["{docs}/**/*"] + ["Rakefile"]
 
-  s.add_dependency             "confset", ">= 1.0.0"
   s.add_dependency             "cpf_cnpj"
   s.add_dependency             "flash_integration"
   s.add_dependency             "singleton"

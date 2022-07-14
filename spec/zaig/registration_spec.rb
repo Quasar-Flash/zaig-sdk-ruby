@@ -8,11 +8,14 @@ RSpec.describe Zaig::Registration do
 
     let(:args) { JSON.parse(File.read("spec/fixtures/registration/valid_registration_payload.json")) }
     let(:response) { instance_double(Flash::Integration::Response) }
-    let(:base_url) { Zaig.configuration.defaults.api.base_url.freeze }
-    let(:endpoint) { Zaig.configuration.defaults.api.endpoints.inquiry.credit.freeze }
+    let(:base_url) { "http://localhost" }
+    let(:endpoint) { described_class::ENDPOINT }
     let(:headers) { JSON.parse(File.read("spec/fixtures/default_headers.json")) }
 
     before do
+      Zaig.configure do |c|
+        c.base_url = base_url
+      end
       stub_request(:post, "#{base_url}/#{endpoint}")
         .with(body: args, headers: headers)
         .to_return(status: response_status, body: response_body, headers: {})

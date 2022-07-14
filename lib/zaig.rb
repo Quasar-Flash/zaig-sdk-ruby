@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-require "confset"
 require "cpf_cnpj"
 require "flash_integration"
 require "i18n"
@@ -48,18 +47,6 @@ module Zaig
 
   # Basic configuration settings
   class Configuration
-    attr_accessor :access_token, :base_url, :env
-    attr_reader :defaults
-
-    def initialize
-      @env = "development"
-
-      load_defaults
-    end
-
-    def load_defaults
-      @defaults = Confset.load_files("lib/config/settings/#{@env}.yml")
-      @base_url = @defaults.api.base_url
-    end
+    attr_accessor :access_token, :base_url, :registration_endpoint
   end
 end

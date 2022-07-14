@@ -9,15 +9,19 @@ module Zaig
 
     include Singleton
 
+    ENDPOINT = "zaig/consulta_de_credito"
+
     def initialize(connection: Zaig::Connection.new, registration_payload: Zaig::RegistrationPayload.instance)
       @connection = connection
       @registration_payload = registration_payload
     end
 
     def call(obj)
-      endpoint = Zaig.configuration.defaults.api.endpoints.inquiry.credit.freeze
       payload = @registration_payload.call(obj)
-      res = @connection.post(url: endpoint, body: payload.to_json)
+
+      req_endpoint = Zaig.configuration.registration_endpoint
+
+      res = @connection.post(url: (req_endpoint.nil? ? ENDPOINT : req_endpoint), body: payload.to_json)
 
       verify_response(res)
 
