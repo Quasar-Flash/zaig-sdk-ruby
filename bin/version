@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require "zaig/version"
+require_relative "../lib/zaig/version"
 
 puts ::Zaig::VERSION
