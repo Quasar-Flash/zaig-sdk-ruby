@@ -64,6 +64,9 @@ Layout/CaseIndentation:
   Enabled: true
   EnforcedStyle: case
 
+Layout/LineLength:
+  Max: 200
+
 # RSpec Cops
 
 # warning: its raising fake false warning
@@ -87,6 +90,15 @@ RSpec/VariableDefinition:
 RSpec/VariableName:
   Enabled: true
   EnforcedStyle: snake_case
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 200
 
 Gemspec/DeprecatedAttributeAssignment:
   Enabled: true
@@ -142,5 +154,20 @@ Style/Semicolon:
 
 I18n/RailsI18n:
   Enabled: true
+
 I18n/GetText:
+  Enabled: false
+
+# Metrics
+
+Metrics/MethodLength:
+  Max: 30
+
+Metrics/AbcSize:
+  Max: 50
+
+Metrics/ClassLength:
+  Max: 200
+
+Metrics/ParameterLists:
   Enabled: false

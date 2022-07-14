@@ -1,0 +1,152 @@
+{
+  "address": {
+    "city": "Rio de janeito",
+    "complement": "N/A",
+    "country": "BRA",
+    "neighborhood": "Flamengo",
+    "number": "4",
+    "postal_code": "00000-000",
+    "street": "Rua das rosas",
+    "uf": "RJ"
+  },
+  "client_category": "string",
+  "constitution_date": "2019-08-24",
+  "constitution_type": "llc",
+  "credit_request_date": "2022-07-13T11:00:54.748944",
+  "credit_type": "clean",
+  "document_number": "01.000.028/0001-91",
+  "email": "js@gmail.com",
+  "financial": {
+    "amount": 5000.0,
+    "annual_interest_rate": 2.32,
+    "cdi_percentage": 100,
+    "currency": "BRL",
+    "interest_type": "cdi_plus",
+    "number_of_installments": 4
+  },
+  "guarantors": [
+    {
+      "address": {
+        "city": "Rio de janeito",
+        "complement": "N/A",
+        "country": "BRA",
+        "neighborhood": "Flamengo",
+        "number": "4",
+        "postal_code": "00000-000",
+        "street": "Rua das rosas",
+        "uf": "RJ"
+      },
+      "birthdate": "2019-08-24",
+      "declared_assets": 100000.0,
+      "document_number": "123.456.789-12",
+      "email": "js@gmail.com",
+      "father_name": "João da Silva",
+      "gender": "male",
+      "monthly_income": 5000.0,
+      "mother_name": "Maria da Silva",
+      "name": "João da Silva Junior",
+      "nationality": "BRA",
+      "occupation": "Eng. Software",
+      "phones": [
+        {
+          "area_code": "21",
+          "international_dial_code": "55",
+          "number": "991722315",
+          "type": "residential"
+        }
+      ]
+    }
+  ],
+  "id": "12327933",
+  "legal_name": "Teste Zaig LTDA",
+  "monthly_revenue": 1.0,
+  "phones": [
+    {
+      "area_code": "21",
+      "international_dial_code": "55",
+      "number": "991722315",
+      "type": "residential"
+    }
+  ],
+  "shareholders": [
+    {
+      "address": {
+        "city": "Rio de janeito",
+        "complement": "N/A",
+        "country": "BRA",
+        "neighborhood": "Flamengo",
+        "number": "4",
+        "postal_code": "00000-000",
+        "street": "Rua das rosas",
+        "uf": "RJ"
+      },
+      "birthdate": "2019-08-24",
+      "declared_assets": 100000.0,
+      "document_number": "123.456.789-12",
+      "email": "js@gmail.com",
+      "father_name": "João da Silva",
+      "gender": "male",
+      "monthly_income": 5000.0,
+      "mother_name": "Maria da Silva",
+      "name": "João da Silva Junior",
+      "nationality": "BRA",
+      "occupation": "Eng. Software",
+      "phones": [
+        {
+          "area_code": "21",
+          "international_dial_code": "55",
+          "number": "991722315",
+          "type": "residential"
+        }
+      ]
+    }
+  ],
+  "source": {
+    "channel": "website",
+    "ip": "172.80.4.144",
+    "session_id": "b8da64db-e8f8-47fc-8d8e-11ce26da499f"
+  },
+  "scr_parameters": {
+    "signers": [
+      {
+        "document_number": "111.222.333-44",
+        "name": "João da Silva",
+        "email": "js@gmail.com",
+        "phone": {
+          "area_code": "21",
+          "international_dial_code": "55",
+          "number": "991722315",
+          "type": "residential"
+        }
+      }
+    ],
+    "signature_evidence": {
+      "access_token": "123456",
+      "additional_data": {},
+      "ip_address": "127.0.0.1",
+      "session_id": "b8da64db-e8f8-47fc-8d8e-11ce26da499f",
+      "signed_term": {
+        "raw_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum erat et tempus dapibus. Donec eu sapien tortor. Pellentesquet tortor eget erat pulvinar mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ornare diam arcu, sit amet auctor lorem varius quis. Ut pretium venenatis magna sed ultrices. Donec quis tortor odi."
+      }
+    }
+  },
+  "trading_name": "Teste Zaig LTDA",
+  "warrants": [
+    {
+      "warrant_type": "real_estate",
+      "address": {
+        "city": "Rio de janeito",
+        "complement": "N/A",
+        "country": "BRA",
+        "neighborhood": "Flamengo",
+        "number": "4",
+        "postal_code": "00000-000",
+        "street": "Rua das rosas",
+        "uf": "RJ"
+      },
+      "property_type": "house",
+      "estimated_value": 0,
+      "forced_selling_value": 0
+    }
+  ]
+}

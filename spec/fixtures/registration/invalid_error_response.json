@@ -1,0 +1,10 @@
+{
+  "msg": "Erro na ingração com a Zaig",
+  "resposta_zaig": {
+    "status": 400,
+    "conteudo": {
+      "title": "Request data failed validation",
+      "description": "0.0 is less than the minimum of 1"
+    }
+  }
+}
