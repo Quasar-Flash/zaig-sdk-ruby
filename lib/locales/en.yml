@@ -1,0 +1,6 @@
+en:
+  name: Zaig
+  zaig:
+    errors:
+      field_not_found: Field not found in the server response '{field_name}'
+      unexpected_error: Integration returned an unexpected status code

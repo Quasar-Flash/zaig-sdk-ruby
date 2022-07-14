@@ -1,0 +1,6 @@
+:'pt-BR':
+  name: Zaig
+  zaig:
+    errors:
+      field_not_found: Campo não encontrado na resposta do servidor '{field_name}'
+      unexpected_error: Integração retornou um estado inesperado
