@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.2] - 2022-07-15
+
+### Changed
+
+- refac: make warrants, src and source optional inputs
+
 ## [1.0.1] - 2022-07-14
 
 ### Changed
