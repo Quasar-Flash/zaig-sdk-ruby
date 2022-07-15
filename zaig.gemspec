@@ -6,7 +6,7 @@ require "zaig/version"
 
 Gem::Specification.new do |s|
   s.name        = "zaig"
-  s.version     = "1.0.0"
+  s.version     = ::Zaig::VERSION
   s.platform    = Gem::Platform::RUBY
   s.summary     = "Zaig SDK"
   s.description = "SDK to consume the Zaig services"
