@@ -11,13 +11,14 @@ RSpec.describe Zaig::Registration do
     let(:base_url) { "http://localhost" }
     let(:endpoint) { described_class::ENDPOINT }
     let(:headers) { JSON.parse(File.read("spec/fixtures/default_headers.json")) }
+    let(:payload) { Zaig::RegistrationPayload.instance.call(args) }
 
     before do
       Zaig.configure do |c|
         c.base_url = base_url
       end
       stub_request(:post, "#{base_url}/#{endpoint}")
-        .with(body: args, headers: headers)
+        .with(body: payload.to_json, headers: headers)
         .to_return(status: response_status, body: response_body, headers: {})
     end
 

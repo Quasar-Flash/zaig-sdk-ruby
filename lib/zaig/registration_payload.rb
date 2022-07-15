@@ -11,7 +11,7 @@ module Zaig
       {
         address: build_address(obj["address"]),
         client_category: obj["client_category"],
-        constitution_date: obj["constitution_date"],
+        constitution_date: Date.parse(obj["constitution_date"]).to_s,
         constitution_type: obj["constitution_type"],
         credit_request_date: obj["credit_request_date"],
         credit_type: obj["credit_type"] || "clean",
@@ -63,6 +63,8 @@ module Zaig
       end
 
       def build_shareholders(obj_shareholders)
+        return nil if obj_shareholders.nil?
+
         shareholders = []
 
         obj_shareholders.each do |s|
@@ -86,6 +88,8 @@ module Zaig
       end
 
       def build_financial(fin)
+        return nil if fin.nil?
+
         {
           amount: fin["amount"],
           annual_interest_rate: fin["annual_interest_rate"],
@@ -97,6 +101,8 @@ module Zaig
       end
 
       def build_warrants(obj_warrants)
+        return nil if obj_warrants.nil?
+
         warrants = []
 
         obj_warrants.each do |w|
@@ -112,6 +118,8 @@ module Zaig
       end
 
       def build_source(obj_source)
+        return nil if obj_source.nil?
+
         {
           channel: obj_source["channel"],
           ip: obj_source["ip"],
@@ -120,6 +128,8 @@ module Zaig
       end
 
       def build_scr_parameters(obj_src)
+        return nil if obj_src.nil?
+
         {
           signers: build_signers(obj_src["signers"]),
           signature_evidence: {
@@ -135,6 +145,8 @@ module Zaig
       end
 
       def build_signers(obj_signers)
+        return nil if obj_signers.nil?
+
         signers = []
         obj_signers.each do |s|
           signers << {
