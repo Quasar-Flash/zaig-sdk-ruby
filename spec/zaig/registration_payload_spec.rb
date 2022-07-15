@@ -6,7 +6,7 @@ RSpec.describe Zaig::RegistrationPayload do
   describe "#call" do
     subject(:call_method) { described_class.instance.call(args) }
 
-    let(:args) { JSON.parse(File.read("spec/fixtures/registration/valid_registration_payload.json")) }
+    let(:args) { JSON.parse(File.read("spec/fixtures/registration/valid_registration_payload.json"), symbolize_names: true) }
 
     it { expect(call_method).to include(:address) }
 

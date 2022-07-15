@@ -6,7 +6,7 @@ RSpec.describe Zaig::Registration do
   describe "#call" do
     subject(:call_registration) { described_class.instance.call(args) }
 
-    let(:args) { JSON.parse(File.read("spec/fixtures/registration/valid_registration_payload.json")) }
+    let(:args) { JSON.parse(File.read("spec/fixtures/registration/valid_registration_payload.json"), symbolize_names: true) }
     let(:response) { instance_double(Flash::Integration::Response) }
     let(:base_url) { "http://localhost" }
     let(:endpoint) { described_class::ENDPOINT }
