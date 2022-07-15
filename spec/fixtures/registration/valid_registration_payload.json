@@ -10,9 +10,9 @@
     "uf": "BA"
   },
   "client_category": "cedente",
-  "constitution_date": "2021-12-24T09:00:00.000-03:00",
+  "constitution_date": "2021-12-24",
   "constitution_type": "corp",
-  "credit_request_date": "2022-07-15T11:39:22.216-03:00",
+  "credit_request_date": "2022-07-15",
   "credit_type": null,
   "document_number": "44674230000101",
   "email": "sena.sac@outlook.com",
@@ -39,7 +39,7 @@
         "street": "RUA NA BOA UNIÃO",
         "uf": "BA"
       },
-      "birthdate": "2001-10-11T00:00:00.000-03:00",
+      "birthdate": "2001-10-11",
       "declared_assets": 0.0,
       "document_number": "087.859.035-82",
       "email": "weslleysilva61750@gmail.com",
@@ -61,17 +61,19 @@
     }
   ],
   "scr_parameters": {
-    "signers": [{
-      "document_number": "08785903582",
-      "name": "sena.sac@outlook.com",
-      "email": "sena.sac@outlook.com",
-      "phone": {
-        "area_code": "71",
-        "international_dial_code": "55",
-        "number": "71999886784",
-        "type": "mobile"
+    "signers": [
+      {
+        "document_number": "08785903582",
+        "name": "sena.sac@outlook.com",
+        "email": "sena.sac@outlook.com",
+        "phone": {
+          "area_code": "71",
+          "international_dial_code": "55",
+          "number": "71999886784",
+          "type": "mobile"
+        }
       }
-    }],
+    ],
     "signature_evidence": {
       "additional_data": {},
       "ip_address": "45.174.208.27",

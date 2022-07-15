@@ -11,7 +11,7 @@ module Zaig
       {
         address: build_address(obj["address"]),
         client_category: obj["client_category"],
-        constitution_date: Date.parse(obj["constitution_date"]).to_s,
+        constitution_date: obj["constitution_date"],
         constitution_type: obj["constitution_type"],
         credit_request_date: obj["credit_request_date"],
         credit_type: obj["credit_type"] || "clean",
@@ -70,7 +70,7 @@ module Zaig
         obj_shareholders.each do |s|
           shareholders << {
             address: build_address(s["address"]),
-            birthdate: Date.parse(s["birthdate"]).to_s,
+            birthdate: s["birthdate"],
             declared_assets: s["declared_assets"],
             document_number: CPF.new(s["document_number"]).number,
             email: s["email"],
