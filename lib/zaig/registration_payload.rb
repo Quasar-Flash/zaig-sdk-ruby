@@ -24,10 +24,10 @@ module Zaig
         monthly_revenue: obj["monthly_revenue"].to_f,
         phones: build_phones(obj["phones"]),
         shareholders: build_shareholders(obj["shareholders"]),
-        source: build_source(obj["source"]),
-        scr_parameters: build_scr_parameters(obj["scr_parameters"]),
+        source: obj.key?("source") ? build_source(obj["source"]) : nil,
+        scr_parameters: obj.key?("scr_parameters") ? build_scr_parameters(obj["scr_parameters"]) : nil,
         trading_name: obj["trading_name"],
-        warrants: build_warrants(obj["warrants"])
+        warrants: obj.key?("warrants") ? build_warrants(obj["warrants"]) : nil
       }
     end
 
