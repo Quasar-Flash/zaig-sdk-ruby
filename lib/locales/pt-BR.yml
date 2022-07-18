@@ -2,5 +2,6 @@
   name: Zaig
   zaig:
     errors:
+      validation_error: Houve um problema na validação dos campos
       field_not_found: Campo não encontrado na resposta do servidor '{field_name}'
       unexpected_error: Integração retornou um estado inesperado

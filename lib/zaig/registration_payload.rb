@@ -15,13 +15,13 @@ module Zaig
         constitution_type: obj[:constitution_type],
         credit_request_date: obj[:credit_request_date],
         credit_type: obj[:credit_type] || "clean",
-        document_number: CNPJ.new(obj[:document_number]).number,
+        document_number: CNPJ.new(obj[:document_number]).formatted,
         email: obj[:email],
         financial: obj.key?("financial") ? build_financial(obj[:financial]) : nil,
         guarantors: obj.key?("guarantors") ? build_shareholders(obj[:guarantors]) : nil,
         id: obj[:id],
         legal_name: obj[:legal_name],
-        monthly_revenue: obj[:monthly_revenue].to_f,
+        monthly_revenue: format_money(obj[:monthly_revenue], require_positive: true),
         phones: build_phones(obj[:phones]),
         shareholders: build_shareholders(obj[:shareholders]),
         source: obj.key?("source") ? build_source(obj[:source]) : nil,
@@ -32,6 +32,14 @@ module Zaig
     end
 
     private
+      def format_money(value, require_positive: false)
+        return 1.0 if require_positive && !value.to_f.positive?
+
+        value.to_f
+      rescue StandardError
+        require_positive ? 1.0 : 0.0
+      end
+
       def build_address(obj_address)
         {
           city: obj_address[:city],
@@ -39,7 +47,7 @@ module Zaig
           country: obj_address[:country] || "BRA",
           neighborhood: obj_address[:neighborhood],
           number: obj_address[:number],
-          postal_code: obj_address[:postal_code],
+          postal_code: format_cep(obj_address[:postal_code]),
           street: obj_address[:street],
           uf: obj_address[:uf]
         }
@@ -71,12 +79,12 @@ module Zaig
           shareholders << {
             address: build_address(s[:address]),
             birthdate: s[:birthdate],
-            declared_assets: s[:declared_assets],
-            document_number: CPF.new(s[:document_number]).number,
+            declared_assets: format_money(s[:declared_assets]),
+            document_number: CPF.new(s[:document_number]).formatted,
             email: s[:email],
             father_name: s[:father_name],
             gender: s[:gender],
-            monthly_income: s[:monthly_income].to_f,
+            monthly_income: format_money(s[:monthly_income]),
             mother_name: s[:mother_name],
             name: s[:name],
             nationality: s[:nationality],
@@ -157,6 +165,10 @@ module Zaig
           }
         end
         signers
+      end
+
+      def format_cep(cep)
+        cep.gsub(/[^0-9]/, "").insert(5, "-")
       end
   end
 end

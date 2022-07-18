@@ -45,11 +45,18 @@ module Zaig
       def verify_response(res)
         return if res.status.between?(200, 299)
 
-        raise ::Zaig::UnexpectedError, I18n.t("zaig.errors.unexpected_error") if res.status != 500
+        raise ::Zaig::ServerError, I18n.t("zaig.errors.unexpected_error") if res.status.between?(500, 599)
 
         parsed_res = JSON.parse(res.body, symbolize_names: true)
 
-        raise ::Zaig::ServerError, I18n.t("zaig.errors.field_not_found", field_name: "resposta_zaig") unless parsed_res.key?(:resposta_zaig)
+        unless parsed_res.key?(:resposta_zaig)
+          detail = JSON.parse(res.body, symbolize_names: true)[:detail]
+
+          error = ::Zaig::FieldValidationError.new I18n.t("zaig.errors.validation_error", field_name: "resposta_zaig")
+          error.detail = JSON.parse(res.body, symbolize_names: true)[:detail]
+
+          raise error
+        end
 
         zaig_msg = parsed_res[:resposta_zaig][:msg]
         zaig_http_status = parsed_res[:resposta_zaig][:status]
@@ -59,12 +66,12 @@ module Zaig
 
       def raise_error_by_zaig_status(msg, status)
         case status
-        when 209
-          raise ::Zaig::AlreadyExistsError, msg
         when 400
           raise ::Zaig::FieldValidationError, msg
         when 408
           raise ::Zaig::ExternalTimeoutError, msg
+        when 409
+          raise ::Zaig::AlreadyExistsError, msg
         when 422
           raise ::Zaig::UnprocessableEntityError, msg
         else

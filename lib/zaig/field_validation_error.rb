@@ -2,5 +2,6 @@
 
 module Zaig
   class FieldValidationError < BaseError
+    attr_accessor :detail
   end
 end

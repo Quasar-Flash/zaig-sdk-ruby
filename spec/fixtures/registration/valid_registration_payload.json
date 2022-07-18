@@ -2,23 +2,22 @@
   "address": {
     "city": "São Sebastião do Passé",
     "complement": "ANDAR 1",
-    "country": "BR",
+    "country": "BRA",
     "neighborhood": "CENTRO",
     "number": "85",
-    "postal_code": "43850000",
+    "postal_code": "43850-000",
     "street": "PRACA DOZE DE OUTUBRO",
     "uf": "BA"
   },
   "client_category": "cedente",
   "constitution_date": "2021-12-24",
   "constitution_type": "corp",
-  "credit_request_date": "2022-07-15",
-  "credit_type": null,
-  "document_number": "44674230000101",
+  "credit_request_date": "2022-07-15T17:50:13.503",
+  "document_number": "44.674.230/0001-01",
   "email": "sena.sac@outlook.com",
   "id": "9249eeee-fa76-42f3-9a7d-f728ebd1b1a0",
   "legal_name": "W DOS S DA SILVA",
-  "monthly_revenue": "41666.67",
+  "monthly_revenue": 41666.67,
   "phones": [
     {
       "area_code": "71",
@@ -32,20 +31,20 @@
       "address": {
         "city": "São Sebastião do Passé",
         "complement": "N.A",
-        "country": "BR",
+        "country": "BRA",
         "neighborhood": "BOA UNIÃO",
         "number": "44",
-        "postal_code": "43850000",
+        "postal_code": "43850-000",
         "street": "RUA NA BOA UNIÃO",
         "uf": "BA"
       },
       "birthdate": "2001-10-11",
-      "declared_assets": 0.0,
+      "declared_assets": 1.0,
       "document_number": "087.859.035-82",
       "email": "weslleysilva61750@gmail.com",
       "father_name": null,
       "gender": "male",
-      "monthly_income": 0.0,
+      "monthly_income": 1.0,
       "mother_name": null,
       "name": "Weslley Dos Santos Da Silva",
       "nationality": "BRA",
@@ -60,10 +59,11 @@
       ]
     }
   ],
+  "trading_name": "W DOS S DA SILVA",
   "scr_parameters": {
     "signers": [
       {
-        "document_number": "08785903582",
+        "document_number": "087.859.035-82",
         "name": "sena.sac@outlook.com",
         "email": "sena.sac@outlook.com",
         "phone": {
@@ -77,11 +77,11 @@
     "signature_evidence": {
       "additional_data": {},
       "ip_address": "45.174.208.27",
-      "session_id": null,
+      "session_id": "0b5a2e5440d38b73de2ee38add7296d7",
+      "access_token": "fa48810c-8c25-49e5-92f3-cfab439e7b55",
       "signed_term": {
         "raw_text": "https://site.qflash.com.br/docs/termos-de-uso-qflash.pdf"
       }
-    },
-    "trading_name": "W DOS S DA SILVA"
+    }
   }
 }
