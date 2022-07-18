@@ -33,7 +33,7 @@ RSpec.describe Zaig::Registration do
 
       it do
         expect(call_registration).to have_attributes(
-          analysis_status: "automatically_approved",
+          analysis_status: :automatically_approved,
           credit_proposal_legal_person_key: "b1d2e8c4-0d06-43aa-a885-f10f5dbe1d5d",
           message: "Proposta Enviado para a Zaig",
           raw_data: response_body,
