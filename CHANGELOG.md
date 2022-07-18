@@ -7,11 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.4] - 2022-07-18
+
+### Fixed
+
+- Corrige falhas na validação de campos;
+
 ## [1.0.3] - 2022-07-15
 
 ### Changed
 
-fix: ignore to try to build objects when its nil
+- fix: ignore to try to build objects when its nil
 
 ## [1.0.2] - 2022-07-15
 
