@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.5] - 2022-07-18
+
+### Added
+
+- Disponibiliza coleção de estados disponíveis para validação de empresa;
+- Disponibiliza helpers para facilitar a verificação de estado;
+
 ## [1.0.4] - 2022-07-18
 
 ### Fixed
