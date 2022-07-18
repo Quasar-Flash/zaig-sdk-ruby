@@ -17,6 +17,9 @@ RSpec.describe Zaig::Registration do
       Zaig.configure do |c|
         c.base_url = base_url
       end
+
+      allow(args).to receive(:key?) { true }
+
       stub_request(:post, "#{base_url}/#{endpoint}")
         .with(body: payload.to_json, headers: headers)
         .to_return(status: response_status, body: response_body, headers: {})
@@ -48,6 +51,13 @@ RSpec.describe Zaig::Registration do
       it { expect { call_registration }.to raise_error(Zaig::FieldValidationError) }
     end
 
+    context "when the server status is 400 and has no resposta_zaig" do
+      let(:response_body) { JSON.parse(File.read("spec/fixtures/registration/field_validation_error.json")).to_json }
+      let(:response_status) { 400 }
+
+      it { expect { call_registration }.to raise_error(Zaig::FieldValidationError) }
+    end
+
     context "when the server status is 422" do
       let(:response_body) { JSON.parse(File.read("spec/fixtures/registration/entity_error.json")).to_json }
       let(:response_status) { 400 }
@@ -55,12 +65,12 @@ RSpec.describe Zaig::Registration do
       it { expect { call_registration }.to raise_error(Zaig::UnprocessableEntityError) }
     end
 
-    # context "when the server status is 209" do
-    #   let(:response_body) { JSON.parse(File.read("spec/fixtures/registration/registration_already_exists.json")).to_json }
-    #   let(:response_status) { 500 }
+    context "when the server status is 409" do
+      let(:response_body) { JSON.parse(File.read("spec/fixtures/registration/registration_already_exists.json")).to_json }
+      let(:response_status) { 409 }
 
-    #   it { expect { call_registration }.to raise_error(Zaig::AlreadyExistsError) }
-    # end
+      it { expect { call_registration }.to raise_error(Zaig::AlreadyExistsError) }
+    end
 
     context "when the server status is 408" do
       let(:response_body) { JSON.parse(File.read("spec/fixtures/registration/timeout_error_response.json")).to_json }

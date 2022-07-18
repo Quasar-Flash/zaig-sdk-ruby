@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "singleton"
-
 module Zaig
   # Class to request a registration to the remote server.
   class Registration

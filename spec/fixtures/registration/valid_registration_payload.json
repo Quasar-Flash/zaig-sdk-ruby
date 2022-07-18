@@ -1,86 +1,151 @@
 {
   "address": {
-    "city": "São Sebastião do Passé",
-    "complement": "ANDAR 1",
-    "country": "BRA",
-    "neighborhood": "CENTRO",
-    "number": "85",
-    "postal_code": "43850-000",
-    "street": "PRACA DOZE DE OUTUBRO",
-    "uf": "BA"
+    "street": "Rua das rosas",
+    "number": "4",
+    "neighborhood": "Flamengo",
+    "city": "Rio de janeito",
+    "uf": "RJ",
+    "complement": "N/A",
+    "postal_code": "00000-000",
+    "country": "BRA"
   },
-  "client_category": "cedente",
-  "constitution_date": "2021-12-24",
-  "constitution_type": "corp",
-  "credit_request_date": "2022-07-15T17:50:13.503",
-  "document_number": "44.674.230/0001-01",
-  "email": "sena.sac@outlook.com",
-  "id": "9249eeee-fa76-42f3-9a7d-f728ebd1b1a0",
-  "legal_name": "W DOS S DA SILVA",
-  "monthly_revenue": 41666.67,
   "phones": [
     {
-      "area_code": "71",
       "international_dial_code": "55",
-      "number": "71999886784",
-      "type": "mobile"
+      "area_code": "21",
+      "number": "991722315",
+      "type": "residential"
     }
   ],
+  "email": "js@gmail.com",
+  "document_number": "01.000.028/0001-91",
+  "legal_name": "Teste Zaig LTDA",
+  "trading_name": "Teste Zaig LTDA",
+  "constitution_date": "2019-08-24",
+  "constitution_type": "llc",
   "shareholders": [
     {
       "address": {
-        "city": "São Sebastião do Passé",
-        "complement": "N.A",
-        "country": "BRA",
-        "neighborhood": "BOA UNIÃO",
-        "number": "44",
-        "postal_code": "43850-000",
-        "street": "RUA NA BOA UNIÃO",
-        "uf": "BA"
+        "street": "Rua das rosas",
+        "number": "4",
+        "neighborhood": "Flamengo",
+        "city": "Rio de janeito",
+        "uf": "RJ",
+        "complement": "N/A",
+        "postal_code": "00000-000",
+        "country": "BRA"
       },
-      "birthdate": "2001-10-11",
-      "declared_assets": 1.0,
-      "document_number": "087.859.035-82",
-      "email": "weslleysilva61750@gmail.com",
-      "father_name": null,
-      "gender": "male",
-      "monthly_income": 1.0,
-      "mother_name": null,
-      "name": "Weslley Dos Santos Da Silva",
-      "nationality": "BRA",
-      "occupation": null,
       "phones": [
         {
-          "area_code": "71",
           "international_dial_code": "55",
-          "number": "71999886784",
-          "type": "mobile"
+          "area_code": "21",
+          "number": "991722315",
+          "type": "residential"
         }
-      ]
+      ],
+      "email": "js@gmail.com",
+      "document_number": "123.456.789-12",
+      "name": "João da Silva Junior",
+      "birthdate": "2019-08-24",
+      "gender": "male",
+      "nationality": "BRA",
+      "mother_name": "Maria da Silva",
+      "father_name": "João da Silva",
+      "monthly_income": 5000,
+      "declared_assets": 100000,
+      "occupation": "Eng. Software"
     }
   ],
-  "trading_name": "W DOS S DA SILVA",
+  "id": "1236902",
+  "credit_request_date": "2022-07-15T16:56:08.892237",
+  "monthly_revenue": 0,
+  "client_category": "string",
+  "credit_type": "clean",
+  "guarantors": [
+    {
+      "address": {
+        "street": "Rua das rosas",
+        "number": "4",
+        "neighborhood": "Flamengo",
+        "city": "Rio de janeito",
+        "uf": "RJ",
+        "complement": "N/A",
+        "postal_code": "00000-000",
+        "country": "BRA"
+      },
+      "phones": [
+        {
+          "international_dial_code": "55",
+          "area_code": "21",
+          "number": "991722315",
+          "type": "residential"
+        }
+      ],
+      "email": "js@gmail.com",
+      "document_number": "123.456.789-12",
+      "name": "João da Silva Junior",
+      "birthdate": "2019-08-24",
+      "gender": "male",
+      "nationality": "BRA",
+      "mother_name": "Maria da Silva",
+      "father_name": "João da Silva",
+      "monthly_income": 5000,
+      "declared_assets": 100000,
+      "occupation": "Eng. Software"
+    }
+  ],
+  "financial": {
+    "amount": 5000.0,
+    "currency": "BRL",
+    "interest_type": "cdi_plus",
+    "annual_interest_rate": 2.32,
+    "cdi_percentage": 100,
+    "number_of_installments": 4
+  },
+  "warrants": [
+    {
+      "warrant_type": "real_estate",
+      "address": {
+        "street": "Rua das rosas",
+        "number": "4",
+        "neighborhood": "Flamengo",
+        "city": "Rio de janeito",
+        "uf": "RJ",
+        "complement": "N/A",
+        "postal_code": "00000-000",
+        "country": "BRA"
+      },
+      "property_type": "house",
+      "estimated_value": 0,
+      "forced_selling_value": 0
+    }
+  ],
+  "source": {
+    "channel": "website",
+    "ip": "172.80.5.49",
+    "session_id": "b8da64db-e8f8-47fc-8d8e-11ce26da499f"
+  },
   "scr_parameters": {
     "signers": [
       {
-        "document_number": "087.859.035-82",
-        "name": "sena.sac@outlook.com",
-        "email": "sena.sac@outlook.com",
+        "document_number": "111.222.333-44",
+        "name": "João da Silva",
+        "email": "js@gmail.com",
         "phone": {
-          "area_code": "71",
           "international_dial_code": "55",
-          "number": "71999886784",
-          "type": "mobile"
+          "area_code": "21",
+          "number": "991722315",
+          "type": "residential"
         }
       }
     ],
     "signature_evidence": {
+      "ip_address": "127.0.0.1",
+      "session_id": "b8da64db-e8f8-47fc-8d8e-11ce26da499f",
+      "access_token": "123456",
       "additional_data": {},
-      "ip_address": "45.174.208.27",
-      "session_id": "0b5a2e5440d38b73de2ee38add7296d7",
-      "access_token": "fa48810c-8c25-49e5-92f3-cfab439e7b55",
       "signed_term": {
-        "raw_text": "https://site.qflash.com.br/docs/termos-de-uso-qflash.pdf"
+        "raw_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas elementum erat et tempus dapibus. Donec eu sapien tortor. Pellentesquet tortor eget erat pulvinar mattis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ornare diam arcu, sit amet auctor lorem varius quis. Ut pretium venenatis magna sed ultrices. Donec quis tortor odi."
       }
     }
   }

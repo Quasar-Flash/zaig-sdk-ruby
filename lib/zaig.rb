@@ -3,6 +3,7 @@
 require "cpf_cnpj"
 require "flash_integration"
 require "i18n"
+require "singleton"
 
 require "zaig/base_error"
 require "zaig/already_exists_error"

@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-require "singleton"
-
 module Zaig
   # Service class to build a registration payload request.
   class RegistrationPayload
@@ -33,11 +31,7 @@ module Zaig
 
     private
       def format_money(value, require_positive: false)
-        return 1.0 if require_positive && !value.to_f.positive?
-
-        value.to_f
-      rescue StandardError
-        require_positive ? 1.0 : 0.0
+        require_positive && !value.to_f.positive? ? 1.0 : value.to_f
       end
 
       def build_address(obj_address)
