@@ -56,7 +56,9 @@ module Zaig
           raise error
         end
 
-        zaig_msg = parsed_res[:resposta_zaig][:msg]
+        title = parsed_res[:resposta_zaig][:conteudo][:title]
+        description = parsed_res[:resposta_zaig][:conteudo][:description]
+        zaig_msg = "#{title}: #{description}"
         zaig_http_status = parsed_res[:resposta_zaig][:status]
 
         raise_error_by_zaig_status(zaig_msg, zaig_http_status)
@@ -65,15 +67,15 @@ module Zaig
       def raise_error_by_zaig_status(msg, status)
         case status
         when 400
-          raise ::Zaig::FieldValidationError, msg
+          raise ::Zaig::FieldValidationError.new msg
         when 408
-          raise ::Zaig::ExternalTimeoutError, msg
+          raise ::Zaig::ExternalTimeoutError.new msg
         when 409
-          raise ::Zaig::AlreadyExistsError, msg
+          raise ::Zaig::AlreadyExistsError.new msg
         when 422
-          raise ::Zaig::UnprocessableEntityError, msg
+          raise ::Zaig::UnprocessableEntityError.new msg
         else
-          raise ::Zaig::UnexpectedError, msg
+          raise ::Zaig::UnexpectedError.new msg
         end
       end
   end
