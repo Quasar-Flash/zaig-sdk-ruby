@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 module Zaig
-  class UnexpectedError < BaseError
+  class UnexpectedError < Zaig::BaseError
   end
 end

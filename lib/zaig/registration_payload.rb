@@ -6,7 +6,7 @@ module Zaig
     include Singleton
 
     def call(obj)
-      {
+      payload = {
         address: build_address(obj[:address]),
         client_category: obj[:client_category],
         constitution_date: obj[:constitution_date],
@@ -15,18 +15,19 @@ module Zaig
         credit_type: obj[:credit_type] || "clean",
         document_number: CNPJ.new(obj[:document_number]).formatted,
         email: obj[:email],
-        financial: obj.key?("financial") ? build_financial(obj[:financial]) : nil,
-        guarantors: obj.key?("guarantors") ? build_shareholders(obj[:guarantors]) : nil,
         id: obj[:id],
         legal_name: obj[:legal_name],
         monthly_revenue: format_money(obj[:monthly_revenue], require_positive: true),
         phones: build_phones(obj[:phones]),
         shareholders: build_shareholders(obj[:shareholders]),
-        source: obj.key?("source") ? build_source(obj[:source]) : nil,
-        scr_parameters: obj.key?("scr_parameters") ? build_scr_parameters(obj[:scr_parameters]) : nil,
-        trading_name: obj[:trading_name],
-        warrants: obj.key?("warrants") ? build_warrants(obj[:warrants]) : nil
+        trading_name: obj[:trading_name]
       }
+      payload[:guarantors] = build_shareholders(obj[:guarantors]) if obj.key?(:guarantors)
+      payload[:financial] = build_financial(obj[:financial]) if obj.key?(:financial)
+      payload[:scr_parameters] = build_scr_parameters(obj[:scr_parameters]) if obj.key?(:scr_parameters)
+      payload[:source] = build_source(obj[:source]) if obj.key?(:source)
+      payload[:warrants] = build_warrants(obj[:warrants]) if obj.key?(:warrants)
+      payload
     end
 
     private
@@ -76,10 +77,10 @@ module Zaig
             declared_assets: format_money(s[:declared_assets]),
             document_number: CPF.new(s[:document_number]).formatted,
             email: s[:email],
-            father_name: s[:father_name],
+            father_name: filter_blank(s[:father_name]),
             gender: s[:gender],
             monthly_income: format_money(s[:monthly_income]),
-            mother_name: s[:mother_name],
+            mother_name: filter_blank(s[:mother_name]),
             name: s[:name],
             nationality: s[:nationality],
             occupation: s[:occupation],
@@ -161,7 +162,14 @@ module Zaig
         signers
       end
 
+      def filter_blank(value)
+        return value if value.nil?
+
+        value.strip == "" ? nil : value
+      end
+
       def format_cep(cep)
+        cep = cep.gsub("-", "")
         cep.gsub(/[^0-9]/, "").insert(5, "-")
       end
   end

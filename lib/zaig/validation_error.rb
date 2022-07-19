@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 module Zaig
-  class ValidationError < BaseError
+  class ValidationError < Zaig::BaseError
   end
 end

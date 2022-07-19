@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 module Zaig
-  class UnprocessableEntityError < BaseError
+  class UnprocessableEntityError < Zaig::BaseError
   end
 end

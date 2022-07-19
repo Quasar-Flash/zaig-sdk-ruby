@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 module Zaig
-  class ServerError < BaseError
+  class ServerError < Zaig::BaseError
   end
 end
