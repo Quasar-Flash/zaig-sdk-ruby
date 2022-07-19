@@ -139,6 +139,9 @@ Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
 
+Style/RaiseArgs:
+  Enabled: false
+
 # Checks for redundant return expressions.
 Style/RedundantReturn:
   Enabled: true

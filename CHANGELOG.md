@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.6] - 2022-07-19
+
+### Change
+
+- Melhorando o tratamento das mensagens de erro.
+
 ## [1.0.5] - 2022-07-18
 
 ### Added

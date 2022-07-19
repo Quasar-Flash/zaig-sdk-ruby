@@ -169,7 +169,7 @@ module Zaig
       end
 
       def format_cep(cep)
-        cep = cep.gsub("-", "")
+        cep = cep.delete("-")
         cep.gsub(/[^0-9]/, "").insert(5, "-")
       end
   end

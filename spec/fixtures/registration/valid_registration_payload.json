@@ -1,47 +1,75 @@
 {
   "address": {
-    "city": "Rio de Janeiro",
-    "complement": "LT 143 P 14OM R 181DRO ROCHA P",
+    "city": "São Sebastião do Passé",
+    "complement": "ANDAR 1",
     "country": "BRA",
-    "neighborhood": "VIGARIO GERAL",
-    "number": "1150",
-    "postal_code": "21241--305",
-    "street": "RUA FERNANDES DA CUNHA",
-    "uf": "RJ"
+    "neighborhood": "CENTRO",
+    "number": "85",
+    "postal_code": "43850-000",
+    "street": "PRACA DOZE DE OUTUBRO",
+    "uf": "BA"
   },
   "client_category": "cedente",
-  "constitution_date": "2022-02-03",
+  "constitution_date": "2021-12-24",
   "constitution_type": "corp",
-  "credit_request_date": "2022-07-18T18:50:03.506",
-  "document_number": "31.768.022/0002-00",
-  "email": "andrew.correa@capitona.rio",
-  "id": "1b2278bb-6f2e-4a1e-a4ad-3e6bc85ac492",
-  "legal_name": "CAIXOTE INDUSTRIA COMERCIO ATACADO E VAREJO DE VESTUARIO LTDA",
-  "monthly_revenue": "83333.33",
+  "credit_request_date": "2022-07-15T17:50:13.503",
+  "document_number": "44.674.230/0001-01",
+  "email": "sena.sac@outlook.com",
+  "id": "9249eeee-fa76-42f3-9a7d-f728ebd1b1a0",
+  "legal_name": "W DOS S DA SILVA",
+  "monthly_revenue": 41666.67,
   "phones": [
     {
-      "area_code": "21",
+      "area_code": "71",
       "international_dial_code": "55",
-      "number": "21999041607",
-      "type": "commercial"
-    },
-    {
-      "area_code": "21",
-      "international_dial_code": "55",
-      "number": "21999041607",
+      "number": "71999886784",
       "type": "mobile"
     }
   ],
+  "shareholders": [
+    {
+      "address": {
+        "city": "São Sebastião do Passé",
+        "complement": "N.A",
+        "country": "BRA",
+        "neighborhood": "BOA UNIÃO",
+        "number": "44",
+        "postal_code": "43850-000",
+        "street": "RUA NA BOA UNIÃO",
+        "uf": "BA"
+      },
+      "birthdate": "2001-10-11",
+      "declared_assets": 1.0,
+      "document_number": "087.859.035-82",
+      "email": "weslleysilva61750@gmail.com",
+      "father_name": null,
+      "gender": "male",
+      "monthly_income": 1.0,
+      "mother_name": null,
+      "name": "Weslley Dos Santos Da Silva",
+      "nationality": "BRA",
+      "occupation": null,
+      "phones": [
+        {
+          "area_code": "71",
+          "international_dial_code": "55",
+          "number": "71999886784",
+          "type": "mobile"
+        }
+      ]
+    }
+  ],
+  "trading_name": "W DOS S DA SILVA",
   "scr_parameters": {
     "signers": [
       {
-        "document_number": "747.176.530-50",
-        "name": "andrew.correa@capitona.rio",
-        "email": "andrew.correa@capitona.rio",
+        "document_number": "087.859.035-82",
+        "name": "sena.sac@outlook.com",
+        "email": "sena.sac@outlook.com",
         "phone": {
-          "area_code": "21",
+          "area_code": "71",
           "international_dial_code": "55",
-          "number": "21999041607",
+          "number": "71999886784",
           "type": "mobile"
         }
       }
@@ -55,45 +83,5 @@
         "raw_text": "https://site.qflash.com.br/docs/termos-de-uso-qflash.pdf"
       }
     }
-  },
-  "shareholders": [
-    {
-      "address": {
-        "city": "Rio de Janeiro",
-        "complement": "bl 1 104",
-        "country": "BRA",
-        "neighborhood": "Recreio dos Bandeirantes",
-        "number": "50",
-        "postal_code": "22790--707",
-        "street": "Avenida Aldemir Martins",
-        "uf": "RJ"
-      },
-      "birthdate": "1995-07-27",
-      "declared_assets": 100000.0,
-      "document_number": "416.207.768-12",
-      "email": "andrew@caixote.io",
-      "father_name": "",
-      "gender": "male",
-      "monthly_income": 20000.0,
-      "mother_name": "Cintia De Araujo Santana",
-      "name": "Andrew Gabriel Araujo Correa",
-      "nationality": "BRA",
-      "occupation": "administrador",
-      "phones": [
-        {
-          "area_code": "21",
-          "international_dial_code": "55",
-          "number": "21999041607",
-          "type": "residential"
-        },
-        {
-          "area_code": "21",
-          "international_dial_code": "55",
-          "number": "21999041607",
-          "type": "mobile"
-        }
-      ]
-    }
-  ],
-  "trading_name": "CAIXOTE INDUSTRIA COMERCIO ATACADO E VAREJO DE VESTUARIO LTDA"
+  }
 }
