@@ -7,9 +7,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.7] - 2022-07-20
+
+### Changed
+
+- [QC-334](https://qflash.atlassian.net/browse/QC-334) Conexão adiciona token jwt por padrão no cabeçalho da requisição.
+
 ## [1.0.6] - 2022-07-19
 
-### Change
+### Changed
 
 - Melhorando o tratamento das mensagens de erro.
 
