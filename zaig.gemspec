@@ -17,6 +17,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency             "cpf_cnpj"
   s.add_dependency             "flash_integration"
+  s.add_dependency             "jwt"
   s.add_dependency             "singleton"
 
   s.add_development_dependency "bundler", "~> 2.3", ">= 2.3.0"

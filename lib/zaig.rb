@@ -48,6 +48,19 @@ module Zaig
 
   # Basic configuration settings
   class Configuration
-    attr_accessor :access_token, :base_url, :registration_endpoint
+    attr_accessor :base_url, :jwt_secret, :jwt_user
+    attr_writer :jwt_algorithm, :jwt_exp_time, :registration_endpoint
+
+    def jwt_algorithm
+      @jwt_algorithm ||= "HS256"
+    end
+
+    def jwt_exp_time
+      @jwt_exp_time ||= 1_658_439_475
+    end
+
+    def registration_endpoint
+      @registration_endpoint ||= "zaig/consulta_de_credito"
+    end
   end
 end

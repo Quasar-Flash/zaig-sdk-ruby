@@ -17,9 +17,7 @@ module Zaig
     def call(obj)
       payload = @registration_payload.call(obj)
 
-      req_endpoint = Zaig.configuration.registration_endpoint
-
-      res = @connection.post(url: (req_endpoint.nil? ? ENDPOINT : req_endpoint), body: payload.to_json)
+      res = @connection.post(url: Zaig.configuration.registration_endpoint, body: payload.to_json)
 
       verify_response(res)
 

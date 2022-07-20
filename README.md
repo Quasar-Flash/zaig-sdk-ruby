@@ -30,7 +30,9 @@ Initialize the sdk with the basics:
 
 ```ruby
 Zaig.configure do |config|
-  config.access_token = "xxxxx-xxxxx-xxxxx-xxxx" # optional
+  config.jwt_secret = "xxxxx-xxxxx-xxxxx-xxxx" # optional
+  config.jwt_algorithm = "HS256" # optional
+  config.jwt_user = "qcedente" # optional if jwt_secret is not defined
   config.base_url = "https://example.com"
   config.registration_endpoint = "zaig/consulta_de_credito" # optional
 end
