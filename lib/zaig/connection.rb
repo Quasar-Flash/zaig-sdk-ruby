@@ -18,7 +18,7 @@ module Zaig
         Accept: "application/json"
       }
 
-      return headers if @jwt_secret.nil? || @jwt_secret.empty?
+      return headers if @jwt_secret.nil? || @jwt_secret&.empty?
 
       headers[:Authorization] = "Bearer #{access_token}"
       headers

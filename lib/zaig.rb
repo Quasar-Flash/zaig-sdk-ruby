@@ -3,6 +3,7 @@
 require "cpf_cnpj"
 require "flash_integration"
 require "i18n"
+require "jwt"
 require "singleton"
 
 require "zaig/base_error"

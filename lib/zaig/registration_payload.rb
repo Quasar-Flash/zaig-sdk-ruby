@@ -36,9 +36,8 @@ module Zaig
       end
 
       def build_address(obj_address)
-        {
+        address = {
           city: obj_address[:city],
-          complement: obj_address[:complement] || "",
           country: obj_address[:country] || "BRA",
           neighborhood: obj_address[:neighborhood],
           number: obj_address[:number],
@@ -46,6 +45,8 @@ module Zaig
           street: obj_address[:street],
           uf: obj_address[:uf]
         }
+        address[:complement] = obj_address[:complement] if !obj_address[:complement].nil? || !obj_address[:complement]&.empty?
+        address
       end
 
       def build_phone(obj)

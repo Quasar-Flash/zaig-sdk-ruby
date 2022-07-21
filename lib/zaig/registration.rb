@@ -48,8 +48,8 @@ module Zaig
         unless parsed_res.key?(:resposta_zaig)
           detail = JSON.parse(res.body, symbolize_names: true)[:detail]
 
-          error = ::Zaig::FieldValidationError.new I18n.t("zaig.errors.validation_error", field_name: "resposta_zaig")
-          error.detail = JSON.parse(res.body, symbolize_names: true)[:detail]
+          error = ::Zaig::FieldValidationError.new I18n.t("zaig.errors.validation_error")
+          error.detail = detail
 
           raise error
         end
