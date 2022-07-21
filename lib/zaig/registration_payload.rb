@@ -7,26 +7,26 @@ module Zaig
 
     def call(obj)
       payload = {
-        address: build_address(obj[:address]),
         client_category: obj[:client_category],
-        constitution_date: obj[:constitution_date],
-        constitution_type: obj[:constitution_type],
         credit_request_date: obj[:credit_request_date],
         credit_type: obj[:credit_type] || "clean",
         document_number: CNPJ.new(obj[:document_number]).formatted,
-        email: obj[:email],
         id: obj[:id],
         legal_name: obj[:legal_name],
         monthly_revenue: format_money(obj[:monthly_revenue], require_positive: true),
-        phones: build_phones(obj[:phones]),
-        shareholders: build_shareholders(obj[:shareholders]),
         trading_name: obj[:trading_name]
       }
-      payload[:guarantors] = build_shareholders(obj[:guarantors]) if obj.key?(:guarantors)
-      payload[:financial] = build_financial(obj[:financial]) if obj.key?(:financial)
-      payload[:scr_parameters] = build_scr_parameters(obj[:scr_parameters]) if obj.key?(:scr_parameters)
-      payload[:source] = build_source(obj[:source]) if obj.key?(:source)
-      payload[:warrants] = build_warrants(obj[:warrants]) if obj.key?(:warrants)
+      payload[:address] = build_address(obj[:address]) if obj[:address]
+      payload[:constitution_date] = obj[:constitution_date] if obj[:constitution_date]
+      payload[:constitution_type] = obj[:constitution_type] if obj[:constitution_type]
+      payload[:email] = obj[:email] if obj[:email]
+      payload[:financial] = build_financial(obj[:financial]) if obj[:financial]
+      payload[:guarantors] = build_shareholders(obj[:guarantors]) if obj[:guarantors]
+      payload[:phones] = build_phones(obj[:phones]) if obj[:phones]
+      payload[:scr_parameters] = build_scr_parameters(obj[:scr_parameters]) if obj[:scr_parameters]
+      payload[:shareholders] = build_shareholders(obj[:shareholders]) if obj[:shareholders]
+      payload[:source] = build_source(obj[:source]) if obj[:source]
+      payload[:warrants] = build_warrants(obj[:warrants]) if obj[:warrants]
       payload
     end
 

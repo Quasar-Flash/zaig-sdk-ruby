@@ -1,0 +1,33 @@
+{
+  "client_category": "cedente",
+  "credit_request_date": "2022-07-21T14:50:39.756",
+  "document_number": "16.503.201/0001-41",
+  "id": "4fd7db17-6288-4347-8d06-7e9955ba960c",
+  "legal_name": "BRUNO A MENDES KONVITES EXPRESS",
+  "monthly_revenue": "83.33",
+  "scr_parameters": {
+    "signers": [
+      {
+        "document_number": "060.462.676-25",
+        "name": "teste3qc334@teste.com.br",
+        "email": "teste3qc334@teste.com.br",
+        "phone": {
+          "area_code": "11",
+          "international_dial_code": "55",
+          "number": "1199993334",
+          "type": "mobile"
+        }
+      }
+    ],
+    "signature_evidence": {
+      "additional_data": {},
+      "ip_address": "187.115.248.244",
+      "session_id": "b84e86fb3f9cdea6bf9363b7f78bc3f6",
+      "access_token": "d2b4c53e-5760-4dcf-ac29-b2816a4d9d65",
+      "signed_term": {
+        "raw_text": "https://site.qflash.com.br/docs/termos-de-uso-qflash.pdf"
+      }
+    }
+  },
+  "trading_name": "BRUNO A MENDES KONVITES EXPRESS"
+}

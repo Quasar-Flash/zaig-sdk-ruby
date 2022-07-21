@@ -25,7 +25,27 @@ RSpec.describe Zaig::Registration do
         .to_return(status: response_status, body: response_body, headers: {})
     end
 
-    context "when the server status is 200" do
+    context "when all the parameters are valid" do
+      let(:response_body) { JSON.parse(File.read("spec/fixtures/registration/success_registration_response.json")).to_json }
+      let(:response_status) { 200 }
+
+      it { expect(call_registration).to be_kind_of(Zaig::Entities::Response) }
+
+      it do
+        expect(call_registration).to have_attributes(
+          analysis_status: :automatically_approved,
+          credit_proposal_legal_person_key: "b1d2e8c4-0d06-43aa-a885-f10f5dbe1d5d",
+          message: "Proposta Enviado para a Zaig",
+          raw_data: response_body,
+          reason: "automatically_approved",
+          status_code: 200,
+          zaig_id: "9249eeee-fa76-42f3-9a7d-f728ebd1b1a0"
+        )
+      end
+    end
+
+    context "when theres no optional fields and body is valid" do
+      let(:args) { JSON.parse(File.read("spec/fixtures/registration/valid_registration_without_optional_payload.json"), symbolize_names: true) }
       let(:response_body) { JSON.parse(File.read("spec/fixtures/registration/success_registration_response.json")).to_json }
       let(:response_status) { 200 }
 
