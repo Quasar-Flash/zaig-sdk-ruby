@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.8] - 2022-07-21
+
+### Changed
+
+- [QC-334](https://qflash.atlassian.net/browse/QC-334) Remove complemento de endereço do copo da requisição se for nulo ou vazio.
+
 ## [1.0.7] - 2022-07-20
 
 ### Changed
