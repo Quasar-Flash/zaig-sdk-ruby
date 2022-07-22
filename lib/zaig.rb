@@ -56,7 +56,7 @@ module Zaig
     end
 
     def jwt_exp_time
-      @jwt_exp_time ||= 1800
+      @jwt_exp_time ||= 1_658_439_475
     end
 
     def registration_endpoint
