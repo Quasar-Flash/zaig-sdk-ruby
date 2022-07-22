@@ -3,9 +3,10 @@
 module Zaig
   # Class to instance a authenticated connection object.
   class Connection < Flash::Integration::Connection
+    JWT_EXP_TIME = DateTime.now.next_day(1).to_time.to_i.freeze
+
     def initialize(request_class: Faraday, base_url: Zaig.configuration.base_url)
       @jwt_algorithm = Zaig.configuration.jwt_algorithm
-      @jwt_exp_time = Zaig.configuration.jwt_exp_time
       @jwt_secret = Zaig.configuration.jwt_secret
       @jwt_user = Zaig.configuration.jwt_user
 
@@ -26,7 +27,7 @@ module Zaig
 
     private
       def access_token
-        JWT.encode({ exp: @jwt_exp_time, user: @jwt_user }, @jwt_secret, @jwt_algorithm)
+        JWT.encode({ exp: JWT_EXP_TIME, user: @jwt_user }, @jwt_secret, @jwt_algorithm)
       end
   end
 end
