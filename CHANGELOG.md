@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.9] - 2022-07-22
+
+### Fixed
+
+- [QC-334](https://qflash.atlassian.net/browse/QC-334) Renovar cache de token
+
 ## [1.0.8] - 2022-07-21
 
 ### Changed
