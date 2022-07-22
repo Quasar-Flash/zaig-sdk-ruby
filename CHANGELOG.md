@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.11] - 2022-07-22
+
+### Changed
+
+- [QC-334](https://qflash.atlassian.net/browse/QC-334) Aumenta o tempo padrão de expiração para 1 dia.
+
 ## [1.0.10] - 2022-07-22
 
 ### Changed
