@@ -3,8 +3,6 @@
 module Zaig
   # Service class to build a registration payload request.
   class RegistrationPayload
-    include Singleton
-
     def call(obj)
       payload = {
         client_category: obj[:client_category],

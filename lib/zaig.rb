@@ -4,7 +4,6 @@ require "cpf_cnpj"
 require "flash_integration"
 require "i18n"
 require "jwt"
-require "singleton"
 
 require "zaig/base_error"
 require "zaig/already_exists_error"
@@ -57,7 +56,7 @@ module Zaig
     end
 
     def jwt_exp_time
-      @jwt_exp_time ||= 1_658_439_475
+      @jwt_exp_time ||= 1800
     end
 
     def registration_endpoint

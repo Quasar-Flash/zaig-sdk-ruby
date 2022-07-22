@@ -4,14 +4,14 @@ require "spec_helper"
 
 RSpec.describe Zaig::Registration do
   describe "#call" do
-    subject(:call_registration) { described_class.instance.call(args) }
+    subject(:call_registration) { described_class.new.call(args) }
 
     let(:args) { JSON.parse(File.read("spec/fixtures/registration/valid_registration_payload.json"), symbolize_names: true) }
     let(:response) { instance_double(Flash::Integration::Response) }
     let(:base_url) { "http://localhost" }
     let(:endpoint) { described_class::ENDPOINT }
     let(:headers) { JSON.parse(File.read("spec/fixtures/default_headers.json")) }
-    let(:payload) { Zaig::RegistrationPayload.instance.call(args) }
+    let(:payload) { Zaig::RegistrationPayload.new.call(args) }
 
     before do
       Zaig.configure do |c|

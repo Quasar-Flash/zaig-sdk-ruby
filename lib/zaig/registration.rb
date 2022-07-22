@@ -5,11 +5,9 @@ module Zaig
   class Registration
     attr_reader :connection
 
-    include Singleton
-
     ENDPOINT = "zaig/consulta_de_credito"
 
-    def initialize(connection: Zaig::Connection.new, registration_payload: Zaig::RegistrationPayload.instance)
+    def initialize(connection: Zaig::Connection.new, registration_payload: Zaig::RegistrationPayload.new)
       @connection = connection
       @registration_payload = registration_payload
     end

@@ -44,7 +44,7 @@ Run a company registration:
 args = {} # hash with the company informations
 # eg.: spec/fixtures/registration/valid_registration_payload.json
 # documentation: https://integra-o-zaig.dev.qflash.com.br/redoc#tag/Zaig
-reg_service = Zaig::Registration.instance
+reg_service = Zaig::Registration.new
 res = reg_service.call(args)
 # 'res' contains the fields defined at lib/zaig/entities/response.rb
 ```
