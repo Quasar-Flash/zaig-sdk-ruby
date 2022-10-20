@@ -29,7 +29,7 @@ RSpec.describe Zaig::Registration do
       let(:response_body) { JSON.parse(File.read("spec/fixtures/registration/success_registration_response.json")).to_json }
       let(:response_status) { 200 }
 
-      it { expect(call_registration).to be_kind_of(Zaig::Entities::Response) }
+      it { expect(call_registration).to be_a(Zaig::Entities::Response) }
 
       it do
         expect(call_registration).to have_attributes(
@@ -49,7 +49,7 @@ RSpec.describe Zaig::Registration do
       let(:response_body) { JSON.parse(File.read("spec/fixtures/registration/success_registration_response.json")).to_json }
       let(:response_status) { 200 }
 
-      it { expect(call_registration).to be_kind_of(Zaig::Entities::Response) }
+      it { expect(call_registration).to be_a(Zaig::Entities::Response) }
 
       it do
         expect(call_registration).to have_attributes(
