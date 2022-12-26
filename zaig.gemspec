@@ -31,7 +31,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rubocop-performance"
   s.add_development_dependency "rubocop-rspec"
   s.add_development_dependency "rubocop-thread_safety"
-  s.add_development_dependency "simplecov", "~> 0.21.2"
+  s.add_development_dependency "simplecov", "~> 0.22.0"
   s.add_development_dependency "simplecov-json", "~> 0.2.3"
   s.add_development_dependency "webmock", "~> 3.18.1"
   s.metadata["rubygems_mfa_required"] = "true"
