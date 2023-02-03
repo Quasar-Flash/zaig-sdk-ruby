@@ -6,7 +6,7 @@ on:
       - master
 jobs:
   Deploying:
-    uses: Quasar-Flash/workflow-dpl-action/.github/workflows/deployment-ruby-package.yml@dev
+    uses: Quasar-Flash/workflow-dpl-action/.github/workflows/deployment-ruby-package.yml@master
     with:
       release: true
     secrets: inherit
