@@ -1,57 +1,12 @@
-name: Release
+name: Deploy Production
 on:
   workflow_dispatch:
   push:
     branches:
       - master
 jobs:
-  RubyGems:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Setup Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: '2.7'
-      - name: Set environment variables
-        id: vars
-        run: |
-          echo ::set-output name=project_name::$(cat .ruby-gemset)
-          echo ::set-output name=project_version::$(ruby bin/version)
-      - name: Install dependencies
-        run: bundle install --full-index --jobs 4 --retry 3
-      - name: Configure the credentials
-        run: |
-          mkdir -p $HOME/.gem
-          touch $HOME/.gem/credentials
-          chmod 0600 $HOME/.gem/credentials
-          printf -- "---\n:rubygems_api_key: ${RUBYGEMS_API_KEY}\n:github: Bearer ${GITHUB_KEY}\n" > $HOME/.gem/credentials
-        env:
-          GITHUB_KEY: "${{ secrets.GITHUB_TOKEN }}"
-          RUBYGEMS_API_KEY: "${{ secrets.RUBYGEMS_API_KEY }}"
-      - name: Build the Gem
-        run: gem build ${{ steps.vars.outputs.project_name }}.gemspec
-      - name: Push to the RubyGems
-        continue-on-error: true
-        run: gem push ${{ steps.vars.outputs.project_name }}-${{ steps.vars.outputs.project_version }}.gem
-      - name: Push to the GitHub repository
-        continue-on-error: true
-        run: gem push --key github --host https://rubygems.pkg.github.com/Quasar-Flash ${{ steps.vars.outputs.project_name }}-${{ steps.vars.outputs.project_version }}.gem
-      - name: Get Changelog Entry
-        id: changelog_reader
-        uses: mindsers/changelog-reader-action@v2.0.0
-        with:
-          validation_depth: 10
-          version: ${{ steps.vars.outputs.project_version }}
-          path: ./CHANGELOG.md
-      - name: Create a GitHub release
-        uses: ncipollo/release-action@v1
-        with:
-          tag: v${{ steps.vars.outputs.project_version }}
-          name: v${{ steps.vars.outputs.project_version }}
-          body: ${{ steps.changelog_reader.outputs.changes }}
-          prerelease: ${{ steps.changelog_reader.outputs.status == 'prereleased' }}
-          draft: ${{ steps.changelog_reader.outputs.status == 'unreleased' }}
-          allowUpdates: true
-          token: ${{ secrets.GITHUB_TOKEN }}
+  Deploying:
+    uses: Quasar-Flash/workflow-dpl-action/.github/workflows/deployment-ruby-package.yml@dev
+    with:
+      release: true
+    secrets: inherit

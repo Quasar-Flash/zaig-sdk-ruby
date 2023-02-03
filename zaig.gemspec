@@ -6,7 +6,7 @@ require "zaig/version"
 
 Gem::Specification.new do |s|
   s.name        = "zaig"
-  s.version     = ::Zaig::VERSION
+  s.version     = Zaig::VERSION
   s.platform    = Gem::Platform::RUBY
   s.summary     = "Zaig SDK"
   s.description = "SDK to consume the Zaig services"
@@ -25,12 +25,12 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rake", "~> 13.0.6", ">= 10.0.0"
   s.add_development_dependency "rspec", "~> 3.12.0"
   s.add_development_dependency "rubocop", "~> 1.44.0"
-  s.add_development_dependency "rubocop-faker"
-  s.add_development_dependency "rubocop-i18n"
-  s.add_development_dependency "rubocop-packaging"
-  s.add_development_dependency "rubocop-performance"
-  s.add_development_dependency "rubocop-rspec"
-  s.add_development_dependency "rubocop-thread_safety"
+  s.add_development_dependency "rubocop-faker", "~> 1.1.0"
+  s.add_development_dependency "rubocop-i18n", "~> 3.0.0"
+  s.add_development_dependency "rubocop-packaging", "~> 0.5.2"
+  s.add_development_dependency "rubocop-performance", "~> 1.15.2"
+  s.add_development_dependency "rubocop-rspec", "~> 2.18.1"
+  s.add_development_dependency "rubocop-thread_safety", "~> 0.4.4"
   s.add_development_dependency "simplecov", "~> 0.22.0"
   s.add_development_dependency "simplecov-json", "~> 0.2.3"
   s.add_development_dependency "webmock", "~> 3.18.1"

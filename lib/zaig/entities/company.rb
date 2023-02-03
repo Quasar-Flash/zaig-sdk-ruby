@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Class to create company-like objects.
 class Company
   attr_accessor :address, :client_category, :constitution_date, :constitution_type,
                 :document_number, :email, :financial, :guarantors,

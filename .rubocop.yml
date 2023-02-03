@@ -167,9 +167,6 @@ I18n/GetText:
 Metrics/MethodLength:
   Max: 30
 
-Metrics/AbcSize:
-  Max: 50
-
 Metrics/ClassLength:
   Max: 200
 

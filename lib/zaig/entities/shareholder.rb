@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Class to create shareholders objects.
 class Shareholder
   attr_accessor :address, :birthdate, :declared_assets, :document_number, :email, :fathername, :gender,
                 :mothername, :monthly_income, :name, :nationality, :occupation, :phone

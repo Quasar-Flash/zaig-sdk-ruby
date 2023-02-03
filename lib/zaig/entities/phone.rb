@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Class to create phone-like objects.
 class Phone
   attr_accessor :area_code, :international_dial_code, :number, :type
 
