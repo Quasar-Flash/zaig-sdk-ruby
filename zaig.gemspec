@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "rubocop-packaging", "~> 0.5.2"
   s.add_development_dependency "rubocop-performance", "~> 1.16.0"
   s.add_development_dependency "rubocop-rspec", "~> 2.19.0"
-  s.add_development_dependency "rubocop-thread_safety", "~> 0.4.4"
+  s.add_development_dependency "rubocop-thread_safety", "~> 0.5.0"
   s.add_development_dependency "simplecov", "~> 0.22.0"
   s.add_development_dependency "simplecov-json", "~> 0.2.3"
   s.add_development_dependency "webmock", "~> 3.18.1"
