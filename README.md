@@ -11,7 +11,7 @@
 
 ## :rocket: Stack
 
-* `ruby 2.7 to 3.1.X`
+* `ruby 2.7 to 3.2.X`
 * `docker`
 
 ## :link: Links
