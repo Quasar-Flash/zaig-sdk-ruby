@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [1.0.13] - 2023-05-24
+
+### Changed
+
+- Atualiza matrix de testes e aplica atualizações de padrões por @danilogco
+
 ## [1.0.12] - 2023-02-03
 
 ### Changed
