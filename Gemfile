@@ -11,7 +11,7 @@ group :development do
   gem "bundler", "~> 2.3", ">= 2.3.0"
   gem "factory_bot", "~> 6.2"
   gem "pry", "~> 0.14.1"
-  gem "rake", "~> 13.0.6", ">= 10.0.0"
+  gem "rake", "~> 13.1.0"
   gem "rspec", "~> 3.12.0"
   gem "rubocop", "~> 1.57.1"
   gem "rubocop-faker", "~> 1.1.0"
