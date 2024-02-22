@@ -12,7 +12,7 @@ group :development do
   gem "factory_bot", "~> 6.2"
   gem "pry", "~> 0.14.1"
   gem "rake", "~> 13.1.0"
-  gem "rspec", "~> 3.12.0"
+  gem "rspec", "~> 3.13.0"
   gem "rubocop", "~> 1.60.2"
   gem "rubocop-faker", "~> 1.1.0"
   gem "rubocop-i18n", "~> 3.0.0"
