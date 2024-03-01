@@ -18,7 +18,7 @@ group :development do
   gem "rubocop-i18n", "~> 3.0.0"
   gem "rubocop-packaging", "~> 0.5.2"
   gem "rubocop-performance", "~> 1.20.1"
-  gem "rubocop-rspec", "~> 2.25.0"
+  gem "rubocop-rspec", "~> 2.27.0"
   gem "rubocop-thread_safety", "~> 0.5.1"
   gem "simplecov", "~> 0.22.0"
   gem "simplecov-json", "~> 0.2.3"
