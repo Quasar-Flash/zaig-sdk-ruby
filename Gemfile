@@ -19,7 +19,7 @@ group :development do
   gem "rubocop-packaging", "~> 0.5.2"
   gem "rubocop-performance", "~> 1.22.1"
   gem "rubocop-rspec", "~> 3.2.0"
-  gem "rubocop-thread_safety", "~> 0.5.1"
+  gem "rubocop-thread_safety", "~> 0.6.0"
   gem "simplecov", "~> 0.22.0"
   gem "simplecov-json", "~> 0.2.3"
   gem "webmock", "~> 3.24.0"
