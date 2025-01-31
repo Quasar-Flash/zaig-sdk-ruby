@@ -15,7 +15,7 @@ group :development do
   gem "rspec", "~> 3.13.0"
   gem "rubocop", "~> 1.71.1"
   gem "rubocop-faker", "~> 1.2.0"
-  gem "rubocop-i18n", "~> 3.0.0"
+  gem "rubocop-i18n", "~> 3.1.0"
   gem "rubocop-packaging", "~> 0.5.2"
   gem "rubocop-performance", "~> 1.23.0"
   gem "rubocop-rspec", "~> 3.4.0"
