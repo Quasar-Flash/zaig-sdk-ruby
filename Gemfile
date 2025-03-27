@@ -13,7 +13,7 @@ group :development do
   gem "pry", "~> 0.15.0"
   gem "rake", "~> 13.2.1"
   gem "rspec", "~> 3.13.0"
-  gem "rubocop", "~> 1.73.2"
+  gem "rubocop", "~> 1.75.1"
   gem "rubocop-faker", "~> 1.3.0"
   gem "rubocop-i18n", "~> 3.2.0"
   gem "rubocop-packaging", "~> 0.5.2"
