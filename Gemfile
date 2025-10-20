@@ -17,7 +17,7 @@ group :development do
   gem "rubocop-faker", "~> 1.3.0"
   gem "rubocop-i18n", "~> 3.2.0"
   gem "rubocop-packaging", "~> 0.5.2"
-  gem "rubocop-performance", "~> 1.25.0"
+  gem "rubocop-performance", "~> 1.26.1"
   gem "rubocop-rspec", "~> 3.7.0"
   gem "rubocop-thread_safety", "~> 0.7.0"
   gem "simplecov", "~> 0.22.0"
