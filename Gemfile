@@ -22,5 +22,5 @@ group :development do
   gem "rubocop-thread_safety", "~> 0.7.0"
   gem "simplecov", "~> 0.22.0"
   gem "simplecov-json", "~> 0.2.3"
-  gem "webmock", "~> 3.25.0"
+  gem "webmock", "~> 3.26.0"
 end
